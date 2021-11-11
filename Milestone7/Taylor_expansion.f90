@@ -26,20 +26,18 @@ module Taylor_expansion
     
     contains 
 
-function Taylor( fk, x0, x, M ) result(T)
+function Taylor( fk, x0, x, M ) result(S)
  procedure (f_RxN_R) :: fk               ! kth derivative of f(x) 
  real, intent(in) :: x0, x               ! x0 origen of Tayler series
                                          ! Taylor is evaluated at x 
  integer, optional, intent(in) :: M      ! polynomial degree (M+1 terms)  
- real :: T                               ! T is the evaluation of Tayloer series at x 
+ real :: S                               ! S is the evaluation of Taylor series at x 
  
       integer :: k    ! index of Taylor series 
       real :: ak      ! general term of the series 
       integer :: Mmax ! max number of terms 
-      logical :: add  ! if true then, sum 
-      real :: Tk      ! kth term of Taylor series 
-      real :: Tk1     ! k-1th term of Taylor series 
-      real :: eps     ! Tolerance 
+      real :: S1      ! M terms of Taylor series   
+      logical :: add  ! if true then, sum  
       
       
       if (present(M)) then 
@@ -48,18 +46,16 @@ function Taylor( fk, x0, x, M ) result(T)
                            Mmax = 1000
       end if 
       
-       T = 0 ; eps = 1e-5; k = 0 
+       S = 0 ;  k = 0 
        add = .true. 
        
        do while (add) 
            ak = fk(x0, k) / gamma( real(k+1) ) 
-           Tk = ak * ( x - x0 )**k  
-           T = T + Tk   
-         ! sum if Tk is greater eps and 
-         ! sum if number of terms is smaller than Mmax   
-           add = (abs(Tk) > eps .or. abs(Tk1) > eps) .and. (k < Mmax)
+           S1 = S 
+           S = S + ak * ( x - x0 )**k    
+         ! sum if S(k) /= S(k-1) and k < Mmax
+           add = (S /= S1 .or. abs(ak) == 0) .and. (k < Mmax)
            k = k + 1
-           Tk1 = Tk 
        end do 
        
    

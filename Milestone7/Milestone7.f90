@@ -12,10 +12,11 @@ program Milestone7
 
       
   !  Association: M is dummy argument, 4 is actual argument 
-     write(*,*) " Taylor exp(1.) x0=0   :", Taylor( fk = dkexp, x0 = 0., x = 1., M = 1) 
-     write(*,*) " Taylor exp(1.) x0=0   :", Taylor( fk = dkexp, x0 = 0., x = 1., M = 4) 
-     write(*,*) " Taylor exp(1.) x0=0   :", Taylor( fk = dkexp, x0 = 0., x = 1. )
-     
+     write(*,*) " Taylor exp(1.) x0=0 with 2 terms  :", Taylor( fk = dkexp, x0 = 0., x = 1., M = 1) 
+     write(*,*) " Taylor exp(1.) x0=0 with 5 terms  :", Taylor( fk = dkexp, x0 = 0., x = 1., M = 4) 
+     write(*,*) " Taylor exp(1.) x0=0 eith infinity terms  :", Taylor( fk = dkexp, x0 = 0., x = 1. )
+     write(*,*) " Press enter to continue";  read(*,*) 
+    
      
      call plot_ini(xmin = 0., xmax = 2*PI, ymin = -2., ymax = 2.) 
      call plotf( cosine ) 
