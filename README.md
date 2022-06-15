@@ -1,8 +1,8 @@
 # Informatics. Semester 1. ETSIAE
-Milestones [PDF](https://github.com/jahrWork/Informatics_S1_ETSIAE/blob/master/doc/Hitos_semanales.pdf) 
-of the first semester of Informatics. ETSIAE
+Weekly Milestones [PDF](https://github.com/jahrWork/Informatics_S1_ETSIAE/blob/master/doc/Hitos_semanales.pdf) 
+to learn foundations of numerical calculations (Python or Fortran). 
 
-Final assignment [PDF](https://github.com/jahrWork/Informatics_S1_ETSIAE/blob/master/doc/P3_assignment.pdf). Oral presentation.  
+Free final assignment [PDF](https://github.com/jahrWork/Informatics_S1_ETSIAE/blob/master/doc/P3_assignment.pdf). Oral presentation.  
 
 How to work with this repository: 
 1) Code / open with Visual Studio 
