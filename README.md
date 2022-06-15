@@ -1,4 +1,4 @@
-# Informatics Semester1 ETSIAE
+# Informatics. Semester 1. ETSIAE
 Milestones [PDF](https://github.com/jahrWork/Informatics_S1_ETSIAE/blob/master/doc/Hitos_semanales.pdf) 
 of the first semester of Informatics. ETSIAE
 1) Code / open with Visual Studio 
