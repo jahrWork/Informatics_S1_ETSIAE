@@ -35,7 +35,7 @@ program Milestone5
     allocate( Ak(8, 8, 0:5) ) 
     
     do k=0, 5 
-     Ak(:, :, k) = power( Vandermonde(5), k) 
+     Ak(:, :, k) = power( Vandermonde(8), k) 
     end do 
     
     S = trace( sum( Ak, dim=3) )  ! trace( I + Ak + Ak**2 +... Ak**5 ) 
