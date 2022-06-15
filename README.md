@@ -1,5 +1,6 @@
 # Informatics_S1_ETSIAE
-Milestones of the first semester of Informatics. ETSIAE
+Milestones ### [PDF book](https://github.com/jahrWork/Informatics_S1_ETSIAE/blob/master/Hitos_semanales.pdf) 
+of the first semester of Informatics. ETSIAE
 1) Code / open with Visual Studio 
 2) Choose your local path and clone solution 
 3) Select VS solution and open it 
